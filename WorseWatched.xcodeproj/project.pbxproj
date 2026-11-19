@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* iOSApp.swift */; };
+		A10000000000000000000002 /* WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* WatchApp.swift */; };
+		A10000000000000000000003 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* ScannerView.swift */; };
+		A10000000000000000000004 /* ScanEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* ScanEngine.swift */; };
+		A10000000000000000000005 /* WorseQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* WorseQuery.swift */; };
+		A10000000000000000000006 /* worse_query.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* worse_query.m */; };
+		A10000000000000000000007 /* ScannerView.swift in Watch Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* ScannerView.swift */; };
+		A10000000000000000000008 /* ScanEngine.swift in Watch Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* ScanEngine.swift */; };
+		A10000000000000000000009 /* WorseQuery.swift in Watch Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* WorseQuery.swift */; };
+		A1000000000000000000000A /* worse_query.m in Watch Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* worse_query.m */; };
+		A1000000000000000000000C /* pathleak.m in iOS Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* pathleak.m */; };
+		A1000000000000000000000D /* pathleak.m in Watch Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* pathleak.m */; };
+		A1000000000000000000000B /* Watch App in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020 /* worsewatched Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A30000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A50000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A40000000000000000000002;
+			remoteInfo = "WorseWatched Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A60000000000000000000001 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Watch;
+			dstSubfolderSpec = 16;
+			files = (
+				A1000000000000000000000B /* Watch App in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* ScanEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanEngine.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* WorseQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorseQuery.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* worse_query.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = worse_query.m; sourceTree = "<group>"; };
+		A20000000000000000000007 /* worse_query.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = worse_query.h; sourceTree = "<group>"; };
+		A20000000000000000000008 /* WorseWatched-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorseWatched-Bridging-Header.h; sourceTree = "<group>"; };
+		A20000000000000000000009 /* WorseWatched.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorseWatched.entitlements; sourceTree = "<group>"; };
+		A20000000000000000000011 /* pathleak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pathleak.m; sourceTree = "<group>"; };
+		A20000000000000000000012 /* pathleak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pathleak.h; sourceTree = "<group>"; };
+		A20000000000000000000010 /* worsewatched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worsewatched.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000020 /* worsewatched Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "worsewatched Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A70000000000000000000001 /* iOS Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70000000000000000000002 /* Watch Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A80000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A80000000000000000000002 /* Sources */,
+				A80000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A80000000000000000000002 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A80000000000000000000004 /* App */,
+				A80000000000000000000005 /* Shared */,
+				A80000000000000000000006 /* Exploits */,
+				A80000000000000000000007 /* Support */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A80000000000000000000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* iOSApp.swift */,
+				A20000000000000000000002 /* WatchApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A80000000000000000000005 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000003 /* ScannerView.swift */,
+				A20000000000000000000004 /* ScanEngine.swift */,
+				A20000000000000000000005 /* WorseQuery.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A80000000000000000000006 /* Exploits */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000006 /* worse_query.m */,
+				A20000000000000000000007 /* worse_query.h */,
+				A20000000000000000000011 /* pathleak.m */,
+				A20000000000000000000012 /* pathleak.h */,
+			);
+			path = Exploits;
+			sourceTree = "<group>";
+		};
+		A80000000000000000000007 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000008 /* WorseWatched-Bridging-Header.h */,
+				A20000000000000000000009 /* WorseWatched.entitlements */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A80000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000010 /* worsewatched.app */,
+				A20000000000000000000020 /* worsewatched Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A40000000000000000000001 /* WorseWatched */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90000000000000000000001 /* Build configuration list for PBXNativeTarget "WorseWatched" */;
+			buildPhases = (
+				A70000000000000000000001 /* iOS Frameworks */,
+				A60000000000000000000001 /* Embed Watch Content */,
+				AA0000000000000000000001 /* iOS Sources */,
+				AB0000000000000000000001 /* iOS Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A30000000000000000000002 /* PBXTargetDependency */,
+			);
+			name = WorseWatched;
+			productName = WorseWatched;
+			productReference = A20000000000000000000010 /* worsewatched.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A40000000000000000000002 /* WorseWatched Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90000000000000000000002 /* Build configuration list for PBXNativeTarget "WorseWatched Watch App" */;
+			buildPhases = (
+				A70000000000000000000002 /* Watch Frameworks */,
+				AA0000000000000000000002 /* Watch Sources */,
+				AB0000000000000000000002 /* Watch Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WorseWatched Watch App";
+			productName = "worsewatched Watch App";
+			productReference = A20000000000000000000020 /* worsewatched Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A50000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					A40000000000000000000001 = {CreatedOnToolsVersion = 27.0; };
+					A40000000000000000000002 = {CreatedOnToolsVersion = 27.0; };
+				};
+			};
+			buildConfigurationList = A90000000000000000000003 /* Build configuration list for PBXProject "WorseWatched" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A80000000000000000000001;
+			productRefGroup = A80000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A40000000000000000000001 /* WorseWatched */,
+				A40000000000000000000002 /* WorseWatched Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB0000000000000000000001 /* iOS Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		AB0000000000000000000002 /* Watch Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0000000000000000000001 /* iOS Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* iOSApp.swift in Sources */,
+				A10000000000000000000003 /* ScannerView.swift in Sources */,
+				A10000000000000000000004 /* ScanEngine.swift in Sources */,
+				A10000000000000000000005 /* WorseQuery.swift in Sources */,
+				A10000000000000000000006 /* worse_query.m in Sources */,
+				A1000000000000000000000C /* pathleak.m in iOS Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0000000000000000000002 /* Watch Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000002 /* WatchApp.swift in Sources */,
+				A10000000000000000000007 /* ScannerView.swift in Watch Sources */,
+				A10000000000000000000008 /* ScanEngine.swift in Watch Sources */,
+				A10000000000000000000009 /* WorseQuery.swift in Watch Sources */,
+				A1000000000000000000000A /* worse_query.m in Watch Sources */,
+				A1000000000000000000000D /* pathleak.m in Watch Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A30000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A40000000000000000000002 /* WorseWatched Watch App */;
+			targetProxy = A30000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AC0000000000000000000001 /* Project Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AC0000000000000000000002 /* Project Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AC0000000000000000000003 /* iOS Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/Support/WorseWatched.entitlements;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = worsewatched;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceoca.worsewatch;
+				PRODUCT_NAME = worsewatched;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/Support/WorseWatched-Bridging-Header.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AC0000000000000000000004 /* iOS Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/Support/WorseWatched.entitlements;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = worsewatched;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceoca.worsewatch;
+				PRODUCT_NAME = worsewatched;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/Support/WorseWatched-Bridging-Header.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AC0000000000000000000005 /* Watch Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/Support/WorseWatched.entitlements;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = worsewatched;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ceoca.worsewatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceoca.worsewatch.watchkitapp;
+				PRODUCT_NAME = "worsewatched Watch App";
+				EXECUTABLE_NAME = WorseWatchedWatch;
+				SDKROOT = watchos;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/Support/WorseWatched-Bridging-Header.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		AC0000000000000000000006 /* Watch Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/Support/WorseWatched.entitlements;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = worsewatched;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ceoca.worsewatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceoca.worsewatch.watchkitapp;
+				PRODUCT_NAME = "worsewatched Watch App";
+				EXECUTABLE_NAME = WorseWatchedWatch;
+				SDKROOT = watchos;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/Support/WorseWatched-Bridging-Header.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A90000000000000000000001 /* iOS Config List */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC0000000000000000000003 /* iOS Debug */,
+				AC0000000000000000000004 /* iOS Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90000000000000000000002 /* Watch Config List */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC0000000000000000000005 /* Watch Debug */,
+				AC0000000000000000000006 /* Watch Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90000000000000000000003 /* Project Config List */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC0000000000000000000001 /* Project Debug */,
+				AC0000000000000000000002 /* Project Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A50000000000000000000001 /* Project object */;
+}
