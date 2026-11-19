@@ -1,0 +1,88 @@
+name: Build worsewatched IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check Xcode
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          xcodebuild -showsdks
+
+      - name: Validate project files
+        run: |
+          set -euo pipefail
+          plutil -lint WorseWatched.xcodeproj/project.pbxproj
+          plutil -lint Sources/Support/WorseWatched.entitlements
+          xcodebuild -list -project WorseWatched.xcodeproj
+          test -f Sources/Support/WorseWatched-Bridging-Header.h
+          test -f Sources/Exploits/worse_query.h
+          test -f Sources/Exploits/worse_query.m
+          test -f Sources/Exploits/pathleak.h
+          test -f Sources/Exploits/pathleak.m
+          test -f Sources/Shared/ScanEngine.swift
+          test -f Sources/Shared/ScannerView.swift
+          test -f Sources/Shared/WorseQuery.swift
+          test -f build-ipa.sh
+
+      - name: Build and package
+        run: |
+          set -euo pipefail
+          chmod +x build-ipa.sh
+          bash ./build-ipa.sh
+
+      - name: Verify IPA layout and identifiers
+        run: |
+          set -euo pipefail
+          rm -rf verify-ipa
+          mkdir -p verify-ipa
+          unzip -q worsewatched.ipa -d verify-ipa
+
+          APP="verify-ipa/Payload/worsewatched.app"
+          WATCH="$APP/Watch/worsewatched Watch App.app"
+
+          test -f "$APP/Info.plist"
+          test -f "$WATCH/Info.plist"
+
+          IOS_ID="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$APP/Info.plist")"
+          WATCH_ID="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$WATCH/Info.plist")"
+          IOS_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP/Info.plist")"
+          WATCH_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$WATCH/Info.plist")"
+
+          test "$IOS_ID" = "com.ceoca.worsewatch"
+          test "$WATCH_ID" = "com.ceoca.worsewatch.watchkitapp"
+          test -f "$APP/$IOS_EXECUTABLE"
+          test -f "$WATCH/$WATCH_EXECUTABLE"
+
+          if /usr/bin/codesign -dv "$APP" >/dev/null 2>&1; then
+            echo "[!] iPhone app unexpectedly contains a code signature"
+            exit 1
+          fi
+          if /usr/bin/codesign -dv "$WATCH" >/dev/null 2>&1; then
+            echo "[!] Watch app unexpectedly contains a code signature"
+            exit 1
+          fi
+
+          echo "[OK] iPhone app: $IOS_ID"
+          echo "[OK] Watch app: $WATCH_ID"
+          echo "[OK] Watch companion is embedded in Watch/."
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: worsewatched-ipa
+          path: worsewatched.ipa
+          if-no-files-found: error
